@@ -1,0 +1,50 @@
+
+.billet-container {
+  font-family: "Arial", sans-serif;
+  width: 100vh;
+  height: 100%;
+  padding: 30px;
+  background-color: #f5f6fa;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.billet-container h2 {
+  color: #2f3640;
+  margin-bottom: 20px;
+}
+
+.billet-info {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #353b48;
+}
+
+.billet-info span {
+  font-weight: bold;
+}
+
+.qr-code {
+  margin: 20px auto;
+  width: 256px;
+  height: 256px;
+  display: block;
+  border: 1px solid #dcdde1;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.billet-message {
+  margin-top: 20px;
+  color: #44bd32;
+  font-weight: 600;
+}
+
+.billet-error {
+  color: #e84118;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}

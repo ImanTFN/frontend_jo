@@ -1,0 +1,240 @@
+.page-container {
+  text-align: center;
+  width: 93%;
+  height:30vh;
+  margin: 0px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+  margin: 0px auto;
+  display: block;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.login-form button {
+  margin: 0px auto;
+  width: 30%;
+  padding: 8px;
+  background-color: #002855;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #004aad;
+}
+
+
+
+
+/* Dashboard */
+
+
+.admin-dashboard {
+  width: 100%;     
+  height: 90vh;            
+  margin: 1px auto;       
+  padding: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Titres */
+.admin-dashboard h2 {
+  text-align: center;
+  color: #2f3640;
+  margin-bottom: 20px;
+}
+
+.admin-dashboard h3 {
+  text-align: center;
+  color: #40739e;
+  border-bottom: 2px solid #dcdde1;
+  margin-bottom: 10px;
+}
+
+/* Sections */
+.admin-dashboard section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Listes */
+.admin-dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dashboard ul li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #dcdde1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-dashboard ul li:last-child {
+  border-bottom: none;
+}
+
+/* Boutons */
+.admin-dashboard button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.admin-dashboard button:hover {
+  opacity: 0.9;
+}
+
+.admin-dashboard button:nth-child(1) { /* Créer / Modifier */
+  background-color: #44bd32;
+  color: white;
+}
+
+.admin-dashboard button:nth-child(2) { /* Supprimer */
+  background-color: #e84118;
+  color: white;
+}
+
+/* Formulaire d'ajout d'offre */
+.add-offre-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.add-offre-form input {
+  padding: 8px 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.add-offre-form button {
+  background-color: #273c75;
+  color: white;
+}
+
+/* Section statistiques */
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-stats .stat {
+  background-color: #dcdde1;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 150px;
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dashboard-stats .stat h4 {
+  margin-bottom: 5px;
+  color: #40739e;
+}
+
+.dashboard-stats .stat p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #2f3640;
+
+  
+}
+
+/* Commandes */
+.admin-dashboard section.commandes-section {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.admin-dashboard section.commandes-section h3 {
+  color: #40739e;
+  text-align: center;
+  border-bottom: 2px solid #dcdde1;
+  margin-bottom: 15px;
+}
+
+.admin-dashboard section.commandes-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dashboard section.commandes-section ul li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dcdde1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f5f6fa;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.admin-dashboard section.commandes-section ul li:last-child {
+  border-bottom: none;
+}
+
+
+
+.admin-dashboard section.commandes-section ul li p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #353b48;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+  .admin-dashboard section.commandes-section ul li {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-offre-form {
+    flex-direction: column;
+  }
+
+  .admin-dashboard ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-dashboard ul li button {
+    margin: 5px 5px 0 0;
+  }
+}
