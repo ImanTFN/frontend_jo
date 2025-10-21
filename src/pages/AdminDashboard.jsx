@@ -12,7 +12,7 @@ export default function AdminDashboard() {
 
 
  useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
   console.log("Token:" , token);
   const fetchDashboard = async () => {
     try {
-      const res = await axios.get(`${API_URL}/api/admin/dashboard`, axiosConfig);
+      const res = await axios.get(`${API_URL}api/admin/dashboard`, axiosConfig);
       setData(res.data);
       setLoading(false);
     } catch (err) {
@@ -39,7 +39,7 @@ export default function AdminDashboard() {
 
   const createOffre = async () => {
     try {
-      await axios.post(`${API_URL}/api/admin/offres`, newOffre, axiosConfig);
+      await axios.post(`${API_URL}api/admin/offres`, newOffre, axiosConfig);
       setNewOffre({ type: "", description: "", prix: "" });
       fetchDashboard();
     } catch (err) {
@@ -66,7 +66,7 @@ export default function AdminDashboard() {
     };
 
     // Appel API
-    await axios.put(`${API_URL}/api/admin/offres/${id}`, dataToSend, axiosConfig);
+    await axios.put(`${API_URL}api/admin/offres/${id}`, dataToSend, axiosConfig);
 
     // Rafraîchir le dashboard
     fetchDashboard();
@@ -81,7 +81,7 @@ export default function AdminDashboard() {
   const deleteOffre = async (id) => {
     if (!window.confirm("Supprimer cette offre ?")) return;
     try {
-      await axios.delete(`${API_URL}/api/admin/offres/${id}`, axiosConfig);
+      await axios.delete(`${API_URL}api/admin/offres/${id}`, axiosConfig);
       fetchDashboard();
     } catch (err) {
       console.error("Erreur suppression offre:", err.response?.data || err.message);

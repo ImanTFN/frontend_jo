@@ -13,7 +13,7 @@ export default function connexionAdmin() {
 
       
   useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -27,13 +27,13 @@ export default function connexionAdmin() {
     e.preventDefault();
     
     try {
-      const res = await axios.post(`${API_URL}/admin/connexion`, { email, motdepasse });
+      const res = await axios.post(`${API_URL}admin/connexion`, { email, motdepasse });
       
       setToken(res.data.token);
       //console.log("fait");
       localStorage.setItem("adminToken", res.data.token);
       //alert(res.data.message || "Connexion réussite!");
-      navigation("/admin/dashboard");
+      navigation("admin/dashboard");
     } catch (err) {
       alert("Erreur de login d'admin");
     }

@@ -12,7 +12,7 @@ export default function Connexion() {
   const [token, setToken] = useState("");
 
    useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -30,12 +30,12 @@ export default function Connexion() {
     setMessage("");
 
     try {
-      const res = await axios.post(`${API_URL}/api/utilisateurs/connexion`, form);
+      const res = await axios.post(`${API_URL}api/utilisateurs/connexion`, form);
       setMessage("Vous etes bien connecté!");
 
       setToken(res.data.token);
       localStorage.setItem("token", res.data.token); // sauvegarde du token
-      navigate("/offres");
+      navigate("offres");
     } catch (err) {
       setMessage(" Erreur : " + (err.response?.data?.error || "Serveur indisponible"));
     }

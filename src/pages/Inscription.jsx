@@ -8,7 +8,7 @@ export default function Inscription() {
   const [testData, setTestData] = useState(null);
 const navigate = useNavigate();
  useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}api/test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -34,7 +34,7 @@ setMessage("");
 
 try {
   const res = await axios.post(
-    `${API_URL}/api/utilisateurs/inscription`,
+    `${API_URL}api/utilisateurs/inscription`,
     form
   );
   setMessage("Compte créé avec succès !");
@@ -42,7 +42,7 @@ try {
   // Redirection après 1 seconde pour que lutilisateur voit le message
 
   setTimeout(() =>{
-    navigate("/connexion");
+    navigate("connexion");
   },1000);
 
 } catch (err) {

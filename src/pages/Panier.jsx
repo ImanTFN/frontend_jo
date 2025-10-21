@@ -10,7 +10,7 @@ export default function Panier() {
   const [message, setMessage] = useState("");
 
    useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -28,7 +28,7 @@ export default function Panier() {
       const idOffre = panier[0].id;
 
       const res = await axios.post(
-        `${API_URL}/api/paiements/creer-session-paiement`,
+        `${API_URL}api/paiements/creer-session-paiement`,
         { idOffre },
         { headers: { Authorization: `Bearer ${token}` } }
       );

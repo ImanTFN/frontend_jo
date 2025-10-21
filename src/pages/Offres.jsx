@@ -10,7 +10,7 @@ export default function Offres() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
    useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -21,7 +21,7 @@ export default function Offres() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/api/offres`)
+      .get(`${API_URL}api/offres`)
       .then((res) => {
         setOffres(res.data);
         setLoading(false);
@@ -44,7 +44,7 @@ export default function Offres() {
 
     //alert(`${offre.type} ajouté au panier !`);
 
-    navigate("/panier");
+    navigate("panier");
   };
 
   return (

@@ -7,7 +7,7 @@ export default function Home() {
   const [testData, setTestData] = useState(null);
   const [info, setInfo] = useState(null);
      useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}api/test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -17,9 +17,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL || `${API_URL}/`;
+    const apiUrl = import.meta.env.VITE_API_URL || `${API_URL}`;
     axios
-      .get(`${apiUrl}/api/info`)
+      .get(`${apiUrl}api/info`)
       .then((res) => setInfo(res.data))
       .catch((err) => console.error("Erreur:", err));
   }, []);

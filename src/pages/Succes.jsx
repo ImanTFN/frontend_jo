@@ -11,7 +11,7 @@ export default function Succes() {
   const [testData, setTestData] = useState(null);
   const localisation = useLocation();
    useEffect(() => {
-    fetch(`${API_URL}/test`)
+    fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
         console.log("Données backend :", data);
@@ -38,7 +38,7 @@ export default function Succes() {
         console.log("Token envoyé:", token);
         console.log("Clé achat:", cleAchat);
         const res = await axios.post(
-          `${API_URL}/api/commande/confirme`,
+          `${API_URL}api/commande/confirme`,
           { cleAchat },
           { headers: { Authorization: `Bearer ${token}` } }
         );
