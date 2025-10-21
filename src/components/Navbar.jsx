@@ -34,13 +34,7 @@ export default function Navbar() {
       <nav className="navbar admin-navbar">
         <div className="navbar-logo">Dashboard</div>
         <div className="navbar-links">
-          <button
-            onClick={() => {
-              localStorage.removeItem("adminToken");
-              navigation("/admin/connexion");
-            }}
-            className="logout-btn"
-          >
+          <button type="button" onClick={gererDeconnexionAdmin} className="logout-btn">
             Déconnexion
           </button>
         </div>
@@ -63,10 +57,10 @@ export default function Navbar() {
         )}
         {!estConnecte() ? (
           <>
-            <Link to="/connexion">Connexion</Link>
-            <Link to="/inscription">Inscription</Link>
-            <Link to="/panier">Panier</Link>
-            <Link to="/admin/connexion">Admin</Link>
+            <Link to="connexion">Connexion</Link>
+            <Link to="inscription">Inscription</Link>
+            <Link to="panier">Panier</Link>
+            <Link to="admin/connexion">Admin</Link>
           </>
         ) : (
           <button onClick={gererDeconnexion} className="logout-btn">

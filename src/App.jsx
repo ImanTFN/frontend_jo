@@ -18,14 +18,14 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/inscription" element={<Inscription />} />
-        <Route path="/connexion" element={<Connexion />} />
-        <Route path="/offres" element={<RoutePrive><Offres /></RoutePrive>} />
-        <Route path="/panier" element={<RoutePrive><Panier /></RoutePrive>} />
-        <Route path="/succes" element={<RoutePrive><Succes /></RoutePrive>} />
-        <Route path="/admin/connexion" element={<AdminConnexion />} />
-  <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="" element={<Home />} />
+        <Route path="inscription" element={<Inscription />} />
+        <Route path="connexion" element={<Connexion />} />
+        <Route path="offres" element={<RoutePrive><Offres /></RoutePrive>} />
+        <Route path="panier" element={<RoutePrive><Panier /></RoutePrive>} />
+        <Route path="succes" element={<RoutePrive><Succes /></RoutePrive>} />
+        <Route path="admin/connexion" element={<AdminConnexion />} />
+  <Route path="admin/dashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
