@@ -7,7 +7,7 @@ import Connexion from "./pages/Connexion";
 import RoutePrive from "./components/RoutePrive";
 import Offres from "./pages/Offres";
 import Panier from "./pages/Panier";
-import Succes from "./pages/succes";
+import Succes from "./pages/Succes";
 import AdminConnexion from "./pages/AdminConnexion";
 import AdminDashboard from "./pages/AdminDashboard";
 
