@@ -44,7 +44,7 @@ export default function Offres() {
 
     //alert(`${offre.type} ajouté au panier !`);
 
-    navigate("panier");
+    navigate("/panier");
   };
 
   return (
