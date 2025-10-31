@@ -36,7 +36,7 @@ export default function Connexion() {
 
       setToken(res.data.token);
       localStorage.setItem("token", res.data.token); // sauvegarde du token
-      navigate("offres");
+      navigate("/offres");
     } catch (err) {
       setMessage(" Erreur : " + (err.response?.data?.error || "Serveur indisponible"));
     }
