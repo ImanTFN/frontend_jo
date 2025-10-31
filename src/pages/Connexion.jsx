@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {useEffect} from "react";
 import axios from "axios";
 import "./style/Auth.css";
 import { API_URL } from "../config.js";
@@ -11,7 +12,7 @@ export default function Connexion() {
   const [message, setMessage] = useState("");
   const [token, setToken] = useState("");
 
-   useEffect(() => {
+  /* useEffect(() => {
     fetch(`${API_URL}test`)
       .then(res => res.json())
       .then(data => {
@@ -19,7 +20,7 @@ export default function Connexion() {
         setTestData(data);
       })
       .catch(err => console.error("Erreur fetch backend :", err));
-  }, []);
+  }, []);*/
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
