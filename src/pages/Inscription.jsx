@@ -43,7 +43,7 @@ try {
   // Redirection après 1 seconde pour que lutilisateur voit le message
 
   setTimeout(() =>{
-    navigate("connexion");
+    navigate("/connexion");
   },1000);
 
 } catch (err) {
